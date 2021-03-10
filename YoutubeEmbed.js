@@ -19,9 +19,9 @@ export default function YoutubeEmbed() {
   return (
     <View>
       <YoutubePlayer
-        height={225}
-        width={400}
-        videoId={"4dBgFUwZl_c"}
+        height={210}
+        
+        videoId={"3yRMbH36HRE"}
         // onChangeState={onStateChange}
       />
       {/* <Button title={playing ? "pause" : "play"} onPress={togglePlaying} /> */}
