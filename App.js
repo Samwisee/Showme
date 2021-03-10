@@ -6,13 +6,18 @@ import { SafeAreaView, StyleSheet, Text, View, Image, TouchableHighlight } from 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Image source={require('./assets/Showme.jpg')} />
-      <Text>Quality Concerts</Text>
-      <TouchableHighlight>
-        <Image source={require('./assets/Showme.jpg')} />  
-      </TouchableHighlight>
+      <StatusBar 
+        style="auto"
+        backgroundColor="#61dafb"
+        />
+      <View style={styles.preloader}>
+        <Image style={styles.preloaderImage} source={require('./assets/showme.jpg')} />
+        <Text style={styles.text}>Quality Concerts</Text>
+      </View>
+      <View>
 
-      <StatusBar style="auto" />
+      </View>
+
     </SafeAreaView>
   );
 }
@@ -20,9 +25,21 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'gray',
+    backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  preloader:{
+    // display: 'none',
+  },
+  preloaderImage: {
+    height: 200,
+    width: 240,
+    borderRadius: 100,
+  },
+  text: {
+    color: 'white',
+    fontSize: 30,
+  }
 });
 
