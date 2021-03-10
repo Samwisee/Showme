@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View, Image, TouchableHighlight, TextInput, ScrollView } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, Image, TouchableHighlight, TextInput, ScrollView, Button } from 'react-native';
 import YoutubeEmbed from './YoutubeEmbed'
 import Navbar from './Navbar'
+import BandCard from './BandCard'
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
           backgroundColor="white"          />
         <View style={styles.mainContainer}>
           <Navbar></Navbar>
+          <Button title="Click me" onPress={() => alert('Button tapped')} />
 
           <View style={styles.container}>
             <YoutubeEmbed style={styles.youtubeEmbed} videoId={"yiuBxuqb7Ko"}/>
@@ -28,18 +30,9 @@ export default function App() {
             placeholderTextColor="gray" 
           />
 
-          <View style={styles.container}>
-            <Image style={styles.bands} source={require('./assets/aerosmith.jpg')} />
-            <Text style={styles.bandText}>Aerosmith</Text>
-          </View>
-
-          <View style={styles.container}>
-            <Image style={styles.bands} source={require('./assets/ariana.webp')} />
-          </View>
-
-          <View style={styles.container}>
-            <Image style={styles.bands} source={require('./assets/taylor.jpg')} />
-          </View>
+          <BandCard />
+          <BandCard />
+          <BandCard />
 
           <View style={styles.preloader}>
             <Image style={styles.preloaderImage} source={require('./assets/showme.jpg')}  />

@@ -5,9 +5,9 @@ export default function Navbar() {
   
   return (
     <View style={styles.navbar}>
-      <Text style={styles.text}>Home</Text>
+      <Button title="Home" style={styles.text} />
       <Image source={require('./assets/disco_ball.gif')}></Image>
-      <Text style={styles.text}>About</Text>
+      <Button title="About" style={styles.text} />
     </View>
   );
 }
