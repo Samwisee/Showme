@@ -4,9 +4,13 @@ import { SafeAreaView, StyleSheet, Text, View, Image, TouchableHighlight, TextIn
 import YoutubeEmbed from './YoutubeEmbed'
 import Navbar from './Navbar'
 import BandCard from './BandCard'
+// import { useDeviceOrientation } from '@react-native-community/hooks'
 
 
 export default function App() {
+
+  // const {landscape} = useDeviceOrientation()
+
   return (
     <View style={styles.section}>
       <ScrollView>
@@ -15,7 +19,6 @@ export default function App() {
           backgroundColor="white"          />
         <View style={styles.mainContainer}>
           <Navbar></Navbar>
-          <Button title="Click me" onPress={() => alert('Button tapped')} />
 
           <View style={styles.container}>
             <YoutubeEmbed style={styles.youtubeEmbed} videoId={"yiuBxuqb7Ko"}/>

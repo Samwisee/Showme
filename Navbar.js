@@ -5,7 +5,7 @@ export default function Navbar() {
   
   return (
     <View style={styles.navbar}>
-      <Button title="Home" style={styles.text} />
+      <Button title="Home" color="transparent"></Button>
       <Image source={require('./assets/disco_ball.gif')}></Image>
       <Button title="About" style={styles.text} />
     </View>
@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 100,
   },
   text: {
-    color: 'white',
     paddingHorizontal: 15,
     fontSize: 20,
+    backgroundColor: 'black'
   }
 });

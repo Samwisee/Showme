@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef } from "react";
-import { Button, View, Alert } from "react-native";
+import { Button, View, Alert, Dimensions } from "react-native";
 import YoutubePlayer from "react-native-youtube-iframe";
 
 export default function YoutubeEmbed() {
@@ -16,10 +16,13 @@ export default function YoutubeEmbed() {
     setPlaying((prev) => !prev);
   }, []);
 
+  const videoHeight = Dimensions.get("screen").width * .9 * (9/16)
+  console.log((videoHeight))
+
   return (
     <View>
       <YoutubePlayer
-        height={210}
+        height={videoHeight}
         
         videoId={"3yRMbH36HRE"}
         // onChangeState={onStateChange}
